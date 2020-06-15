@@ -1,0 +1,39 @@
+html,
+body,
+#___gastby,
+canvas,
+div {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: black;
+}
+
+section {
+  height: 100vh;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 60px;
+  scroll-snap-align: start;
+}
