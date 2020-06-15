@@ -20,9 +20,10 @@ const Section = () => {
       stagger: 0.2,
       ease: "power2. inOut",
       duration: 3,
+
       scrollTrigger: {
         trigger: ref.current.children[0],
-        scrub: 3,
+        scrub: 6,
         end: "top center",
       },
     })

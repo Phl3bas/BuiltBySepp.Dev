@@ -1,6 +1,5 @@
 import React from "react"
 import * as THREE from "three"
-
 import { Square } from "./Square"
 import { colors } from "../utils/Colors"
 

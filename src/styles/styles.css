@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Special+Elite&display=swap");
+
 html,
 body,
 #___gastby,
@@ -8,6 +10,7 @@ div {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Special Elite";
 }
 
 html {
@@ -23,17 +26,80 @@ canvas {
 }
 
 h1 {
+  position: fixed;
+  font-size: 1rem;
+  padding: 10px;
+  letter-spacing: 0.3rem;
+}
+
+h2 {
   text-transform: uppercase;
   color: black;
+  font-family: "Merriweather";
 }
 
 section {
   height: 100vh;
-  font-size: 2rem;
+  font-size: 1.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 0 60px;
   scroll-snap-align: start;
+  font-family: "Special Elite";
+  letter-spacing: 0.2rem;
+  word-spacing: 0.4rem;
+  line-height: 2.2rem;
+  max-width: 600px;
+}
+
+#scrollicon > path:nth-of-type(2) {
+  animation: scroll 1s ease-in-out forwards infinite;
+}
+
+#scrollicon > path:nth-of-type(3) {
+  animation: scrolltwo 4s ease-in-out forwards infinite;
+}
+
+#twitter,
+#github,
+#email,
+#linkedin {
+  transition: transform 300ms ease;
+}
+
+#twitter:hover,
+#github:hover,
+#email:hover,
+#linkedin:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes scrolltwo {
+  0% {
+    transform: translateY(-4px) scaleY(0);
+    opacity: 0;
+  }
+
+  20%,
+  90% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(80px) scaleY(0);
+    opacity: 0;
+  }
 }
