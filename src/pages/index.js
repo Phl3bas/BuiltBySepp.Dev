@@ -10,6 +10,7 @@ export default () => {
 
   React.useLayoutEffect(() => {
     window.addEventListener("wheel", animate, 2000)
+    window.addEventListener("touchmove", animate, 2000)
   }, [animate])
 
   return (

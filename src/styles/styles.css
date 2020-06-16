@@ -13,9 +13,10 @@ div {
   font-family: "Special Elite";
 }
 
-html {
+html,
+body {
   scroll-snap-type: y mandatory;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 canvas {
@@ -26,9 +27,7 @@ canvas {
 }
 
 h1 {
-  position: fixed;
-  font-size: 1rem;
-  padding: 10px;
+  font-size: 1.6rem;
   letter-spacing: 0.3rem;
 }
 
