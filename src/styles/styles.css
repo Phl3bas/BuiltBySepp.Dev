@@ -46,12 +46,19 @@ section {
   justify-content: center;
   align-items: flex-start;
   padding: 0 60px;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   font-family: "Special Elite";
   letter-spacing: 0.2rem;
   word-spacing: 0.4rem;
   line-height: 2.2rem;
   max-width: 600px;
+  margin-bottom: 100px;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px 35px;
+  border-radius: 5px;
 }
 
 #scrollicon > path:nth-of-type(2) {
@@ -101,5 +108,25 @@ section {
   100% {
     transform: translateY(80px) scaleY(0);
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    scroll-snap-type: y proximity;
+    overflow: hidden scroll;
+
+    -webkit-overflow-scrolling: touch;
+  }
+  section {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.4rem;
+    line-height: 1.5rem;
+    scroll-snap-align: center;
+    overflow: visible;
+    height: 100vh;
+    padding: 0 10px;
+    margin-bottom: 30vh;
   }
 }

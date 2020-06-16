@@ -9,13 +9,7 @@ export default () => {
   const [springs, animate] = useSpringAnimation(20)
 
   React.useLayoutEffect(() => {
-    window.addEventListener("scroll", () => {
-      animate()
-    })
-
-    return window.removeEventListener("scroll", () => {
-      animate()
-    })
+    window.addEventListener("wheel", animate, 2000)
   }, [animate])
 
   return (

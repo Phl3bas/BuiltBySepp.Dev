@@ -3,7 +3,7 @@ import * as THREE from "three"
 import { Square } from "./Square"
 import { colors } from "../utils/Colors"
 
-const number = 15
+const number = 10
 
 const data = new Array(number).fill().map(() => {
   return {

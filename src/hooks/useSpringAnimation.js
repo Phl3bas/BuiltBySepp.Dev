@@ -6,7 +6,7 @@ export const useSpringAnimation = number => {
   const [springs, set] = useSprings(number, i => ({
     from: RandomizedData(i),
     ...RandomizedData(i),
-    config: { mass: 30, tension: 100, friction: 90 },
+    config: { mass: 70, tension: 80, friction: 120 },
   }))
   const animate = React.useCallback(
     () => set(i => ({ ...RandomizedData(i) })),

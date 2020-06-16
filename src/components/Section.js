@@ -7,7 +7,7 @@ if (typeof window !== `undefined`) {
   gsap.core.globals("ScrollTrigger", ScrollTrigger)
 }
 
-const Section = () => {
+const Section = ({ children }) => {
   const ref = React.useRef()
 
   React.useLayoutEffect(() => {
@@ -22,24 +22,15 @@ const Section = () => {
       duration: 3,
 
       scrollTrigger: {
-        trigger: ref.current.children[0],
+        trigger: ref.current,
         scrub: 6,
-        end: "top center",
+        end: "top 100",
+        start: "top center",
       },
     })
   }, [ref])
 
-  return (
-    <section ref={ref}>
-      <h2>A Heading</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex eius
-        eveniet, distinctio praesentium inventore illo nostrum nesciunt
-        incidunt. Dolor sed beatae est voluptas inventore, temporibus eveniet
-        officiis ad aperiam excepturi?
-      </p>
-    </section>
-  )
+  return <section ref={ref}>{children}</section>
 }
 
 export default Section

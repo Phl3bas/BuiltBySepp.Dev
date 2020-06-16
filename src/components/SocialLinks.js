@@ -20,10 +20,18 @@ const styles = {
 const SocialLinks = () => {
   return (
     <div style={styles}>
-      <Email id="email" style={{ width: "30px" }} />
-      <Twitter id="twitter" style={{ width: "30px" }} />
-      <Github id="github" style={{ width: "30px" }} />
-      <LinkedIn id="linkedin" style={{ width: "30px" }} />
+      <a href="mailto:info@builtbysepp.dev" rel="noreferrer" target="_blank">
+        <Email id="email" style={{ width: "30px" }} />
+      </a>
+      <a href="https://twitter.com/phl3bas" rel="noreferrer" target="_blank">
+        <Twitter id="twitter" style={{ width: "30px" }} />
+      </a>
+      <a href="https://github.com/Phl3bas" rel="noreferrer" target="_blank">
+        <Github id="github" style={{ width: "30px" }} />
+      </a>
+      <a href="/" target="_blank" rel="noreferrer">
+        <LinkedIn id="linkedin" style={{ width: "30px" }} />
+      </a>
     </div>
   )
 }
