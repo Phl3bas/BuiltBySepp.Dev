@@ -111,9 +111,10 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-  html {
+  html,
+  body {
     scroll-snap-type: y proximity;
-    overflow: hidden scroll;
+    overflow: hidden hidden;
 
     -webkit-overflow-scrolling: touch;
   }
